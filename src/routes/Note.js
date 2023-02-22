@@ -3,6 +3,12 @@ const routes=express.Router();
 
 const Note=require('./../models/Note');
 
+routes.get('/list',async function(req,res){
+    var notes=await Note.find();
+
+    res.json(notes);
+});
+
 routes.post('/list',async function(req,res){
     var notes=await Note.find({userid:req.body.userid});
 

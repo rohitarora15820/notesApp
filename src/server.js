@@ -19,9 +19,6 @@ app.get('/',function(req,res){
 const nameRoute=require('./routes/Note');
 app.use("/notes",nameRoute);
 
-
-
-
     }
 );
 
